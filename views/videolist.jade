@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1.
+		Video List
+	ul
+		each video, i in videolist
+			li.
+				#{video.title}
+			video(width="320", height="240", controls)
+				source(src="/videos/" + video.title + ".mov" type="video/mp4")
+				source(src="/videos/"+ video.title + ".mov" type="video/ogg")
+				source(src="/videos/" + video.title + ".mov" type="video/webm")
+				|Your browser does not support the video tag.
+

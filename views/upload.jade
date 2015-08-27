@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1= title
+	form#uploadVideo(name="uploadvideo",method="post",action="/uploadvideo")
+		input#videoTitle(type="text", placeholder="video name", name="videoTitle")
+		input#videoDescription(type="text", placeholder="description", name="videoDesc")
+		button#submit(type="submit") Upload
+
